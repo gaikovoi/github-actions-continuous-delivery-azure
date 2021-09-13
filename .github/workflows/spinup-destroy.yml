@@ -24,9 +24,6 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, 'spin up environment')
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
       - name: Azure login
         uses: azure/login@v1
         with:
@@ -58,9 +55,6 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, 'destroy environment')
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
       - name: Azure login
         uses: azure/login@v1
         with:
